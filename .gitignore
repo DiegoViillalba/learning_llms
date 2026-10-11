@@ -1,0 +1,22 @@
+# Entorno
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+.DS_Store
+
+# Datos (se descargan, no se versionan)
+data/*
+!data/README.md
+
+# PDFs de papers
+papers/*.pdf
+
+# Corridas: logs, checkpoints, shards de tokens
+runs/*
+!runs/.gitkeep
+*.pt
+*.ckpt
+*.npy
+*.bin

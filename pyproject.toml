@@ -1,0 +1,32 @@
+[project]
+name = "learning-llms"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.4",
+    "regex>=2026.9.29",
+    "torch>=2.14.1",
+    "tqdm>=4.70.1",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+    "jupyterlab>=4.6.4",
+    "pytest>=9.1.1",
+]
+jax = [
+    "flax>=0.12.10",
+    "jax>=0.11.2",
+    "optax>=0.2.8",
+]
+ref = [
+    "datasets>=5.1.0",
+    "tiktoken>=0.14.0",
+    "transformers>=5.19.0",
+]
+
+[tool.uv]
+# `uv sync` instala todo (PyTorch + referencias + JAX). Para algo mínimo: `uv sync --no-default-groups`
+default-groups = "all"
